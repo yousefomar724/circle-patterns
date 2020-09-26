@@ -1,0 +1,192 @@
+/* GLobal */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{font-family: 'Montserrat', sans-serif;}
+
+/* Header */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1;
+    backdrop-filter: blur(50px);/**/
+}
+
+.header a{
+    text-decoration: none;
+    color: #111111;
+    font-size: 2rem;
+}
+
+.menu-items{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-items a{
+    font-size: 1rem;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+    margin: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.menu-items a:hover{background-color: #f2f2f2;}
+
+.menu-btn{
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu-btn img{width: 1.5rem;}
+
+
+/* Section */
+.section{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero Section */
+.hero-section{
+    background-color: #607D8B;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-col{
+    padding: clamp(1rem, 8vw, 5rem);/* clamp(min, sweet spot, max) */
+    min-width: 50%;
+}
+
+.section h1{
+    font-size: clamp(60px, 8vw, 200px);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    line-height: 3vw;
+    color: #f2f2f2;
+    opacity: 0.5;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.section h2{
+    font-size: clamp(18px, 2.5vw, 60px);
+    padding-left: 3rem;
+    text-transform: uppercase;
+    z-index: 1000;
+}
+
+.section p{padding: 1rem 1rem 0 0;}
+
+.hero-section img{width: clamp(350px, 40vw, 600px);}
+
+/* Second Section */
+.sec-col{
+    width: clamp(300px, 50vw, 600px)
+}
+
+/* Wave styles from "shapedivider.app" */
+.custom-shape-divider-bottom-1601122402 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1601122402 svg {
+    position: relative;
+    display: block;
+    width: calc(127% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1601122402 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* For tablet devices */
+@media (max-width: 1023px){
+    .section{
+        flex-direction: column;
+        padding-top: 80px;
+        height: auto;
+    }
+
+    .hero-section img{
+        width: clamp(300px, 35vw, 550px);
+        padding-bottom: 30px;
+    }
+
+    .hero-col{
+        max-width: 100%;
+        width: clamp(300px, 50vw, 600px);
+    }
+
+    .header .logo{font-size: 1.5rem;}
+
+    .sec-section{height: 100vh;}
+
+    .menu-btn{display: flex;}
+
+    .menu-items{
+        flex-direction: column;
+        position: absolute;
+        justify-content: space-evenly;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 50vh;
+        transform: translateX(100vw);
+        background-color: #f2f2f2;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-items.open{
+        flex-direction: column;
+        position: absolute;
+        justify-content: space-evenly;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 50vh;
+        transform: translateX(0vw);
+        background-color: #f2f2f2;
+    }
+
+    .menu-items a:hover{background-color: #607D8B;}
+
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1601122402 svg {
+        width: calc(146% + 1.3px);
+        height: 91px;
+    }
+}
+
+
+
+
