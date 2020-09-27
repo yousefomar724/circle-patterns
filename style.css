@@ -7,7 +7,8 @@
 
 body{font-family: 'Montserrat', sans-serif;width: 100%;}
 
-/* Header */
+/*---------------------------------------------------------------*/
+/* Start Header */
 .header{
     position: fixed;
     top: 0;
@@ -19,6 +20,10 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
     z-index: 1;
+}
+
+.header .logo{
+    font-weight: 700;
 }
 
 .header a{
@@ -35,6 +40,7 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
 
 .menu-items a{
     font-size: 1rem;
+    font-weight: 600;
     padding: 0.4em 0.8em;
     border-radius: 20px;
     margin: 5px;
@@ -55,9 +61,9 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
 }
 
 .menu-btn img{width: 1.5rem;}
-
-
-/* Section */
+/* End Header */
+/*--------------------------------------------------------------*/
+/* Start Main Section */
 .section{
     position: relative;
     height: 100vh;
@@ -92,54 +98,13 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
     font-size: clamp(18px, 2.5vw, 60px);
     padding-left: 3rem;
     text-transform: uppercase;
-    z-index: 1000;
 }
 
 .section p{padding: 1rem 1rem 0 0;}
 
 .hero-section img{width: clamp(300px, 35vw, 550px);}
 
-/* Second Section */
-.sec-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 40px 0;
-}
-
-.sec-section .sec-col{
-    position: relative;
-    height: 360px;
-    width: 350px;
-    background-color: #fff;
-    border-radius: 30px;
-    box-shadow: -5px -5px 20px #fff,
-     5px 5px 20px #babecc;
-}
-
-.sec-col .title h1{
-    font-size: 2.4em;
-    padding: 10px;
-    text-shadow: 2px 2px 10px #222, -2px -2px 10px #f2f2f2;
-}
-
-.sec-col .title h2{
-    font-size: 1.4em;
-}
-
-.sec-col img{
-    width: 170px;
-    position: absolute;
-    top: -50px;
-    right: -20px;
-}
-
-/* benefit p styles*/
-.content{padding: 0 20px;}
-.content p{line-height: 30px;opacity: 0.6;padding-top: 20px;}
-
-/* Wave styles from "shapedivider.app" */
+/* First Wave */
 .custom-shape-divider-bottom-1601122402 {
     position: absolute;
     bottom: 0;
@@ -157,23 +122,71 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
     height: 100px;
 }
 
-.custom-shape-divider-bottom-1601122402 .shape-fill {
-    fill: #FFFFFF;
+.custom-shape-divider-bottom-1601122402 .shape-fill {fill: #FFFFFF;}
+
+/* End of Main Section */
+/*-------------------------------------------------------------*/
+/* Start Second Section */
+.section-title{
+    text-align: center;
+    color: #f2f2f2;
+    margin-top: 100px;
 }
 
-/* Footer */
-.footer{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #607D8B;
-    height: 200px;
-    padding: 1rem 2rem;
-    z-index: 1;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+.section-title h1{
+    font-size: 4em;
+    text-shadow: 2px 2px 10px #222, -2px -2px 10px #f2f2f2;
 }
+
+.section-title .main{
+    color: #607D8B;
+    font-size: 1.2em;
+    font-weight: 800 !important;
+    text-shadow: none;
+}
+
+.sec-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.sec-section .sec-col{
+    position: relative;
+    height: 360px;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 90px;
+    box-shadow: -5px -5px 20px #fff,
+     5px 5px 20px #babecc;
+}
+
+.sec-col .title h1{
+    font-size: 2.5em;
+    padding: 10px;
+    text-shadow: 2px 2px 10px #222, -2px -2px 10px #f2f2f2;
+}
+
+.sec-col .title h2{font-size: 1.4em;}
+
+.sec-col img{
+    width: 170px;
+    position: absolute;
+    top: -50px;
+    right: -20px;
+}
+
+.content{padding: 0 20px;}
+
+.content p{line-height: 30px;
+    opacity: 0.6;
+    padding-top: 20px;
+}
+/* End of Second Section */
+/*--------------------------------------------------------*/
+/* Start of Footer */
 
 /* second wave*/
 .custom-shape-divider-top-1601157215 {
@@ -196,21 +209,19 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
     fill: #FFFFFF;
 }
 
-/** For mobile devices **/
-@media (max-width: 767px) {
-    .custom-shape-divider-top-1601157215 svg {
-        width: calc(141% + 1.3px);
-        height: 40px;
-    }
-}
-
-.footer h1{text-align: center;}
-
-.footer a{
-    text-decoration: none;
-    color: #111111;
-    font-size: 2rem;
+/* Footer */
+.footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
     background-color: #607D8B;
+    height: 200px;
+    padding: 2rem 2rem;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .footer-items{
@@ -221,7 +232,10 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
 }
 
 .footer-items a{
+    text-decoration: none;
+    color: #111111;
     font-size: 1rem;
+    font-weight: 600;
     padding: 0.4em 0.8em;
     border-radius: 20px;
     margin: 5px;
@@ -229,6 +243,9 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
 }
 
 .footer-items a:hover{background-color: #f2f2f2;}
+/* End of Footer */
+/*----------------------------------------------------------------*/
+/* Rsponsive */
 
 /* For tablet devices */
 @media (max-width: 1023px){
@@ -252,6 +269,7 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
 
     .menu-btn{display: flex;}
 
+    /* Toggle the menu */
     .menu-items{
         flex-direction: column;
         position: absolute;
@@ -260,6 +278,8 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
         right: 0;
         left: 0;
         height: 50vh;
+        width: 50vw;
+        opacity: 0.8;
         transform: translateX(100vw);
         background-color: #f2f2f2;
         transition: transform 0.3s ease-in-out;
@@ -273,7 +293,9 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
         right: 0;
         left: 0;
         height: 50vh;
-        transform: translateX(0vw);
+        width: 50vw;
+        opacity: 0.8;
+        transform: translateX(50vw);
         background-color: #f2f2f2;
     }
 
@@ -286,6 +308,12 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
     }
 
     .sec-col{margin-top: 80px;}
+
+    .section-title h1{font-size: 2.4em;}
+
+    .section-title .main{
+        font-size: 1.4em;
+    }
 }
 
 /* For mobile devices */
@@ -293,6 +321,11 @@ body{font-family: 'Montserrat', sans-serif;width: 100%;}
     .custom-shape-divider-bottom-1601122402 svg {
         width: calc(146% + 1.3px);
         height: 91px;
+    }
+
+    .custom-shape-divider-top-1601157215 svg {
+        width: calc(141% + 1.3px);
+        height: 40px;
     }
 }
 
